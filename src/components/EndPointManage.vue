@@ -43,12 +43,12 @@
           </div>
           <div>
             <label for="api_key" class="text-sm">Workers 后端密钥</label>
-            <input type="password" placeholder="treat it like your browser history" v-model="newApiKey" required
+            <input type="password" placeholder="密钥会像浏览记录已经储存在本地" v-model="newApiKey" required
                    id="api_key" class="text-xs">
           </div>
           <div>
             <label for="custom_domain" class="text-sm">自定义域名 (可选)</label>
-            <input type="text" placeholder="no need for the https:// prefix" v-model="newCustomDomain"
+            <input type="text" placeholder="不需要 https:// 前缀" v-model="newCustomDomain"
                    id="custom_domain"
                    style="margin-bottom: .5rem" class="text-xs">
             <div class="opacity-70 text-xs leading-4 mb-8">
