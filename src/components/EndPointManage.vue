@@ -38,21 +38,21 @@
             {{ endpointActionText }} &nbsp;
           </div>
           <div>
-            <label for="" class="text-sm">Workers Endpoint</label>
+            <label for="" class="text-sm">Workers 后端</label>
             <input type="text" placeholder="https://..." v-model="newEndpoint" class="text-xs" required>
           </div>
           <div>
-            <label for="api_key" class="text-sm">Workers Endpoint API Key</label>
+            <label for="api_key" class="text-sm">Workers 后端密钥</label>
             <input type="password" placeholder="treat it like your browser history" v-model="newApiKey" required
                    id="api_key" class="text-xs">
           </div>
           <div>
-            <label for="custom_domain" class="text-sm">Custom Domain (Optional)</label>
+            <label for="custom_domain" class="text-sm">自定义域名 (可选)</label>
             <input type="text" placeholder="no need for the https:// prefix" v-model="newCustomDomain"
                    id="custom_domain"
                    style="margin-bottom: .5rem" class="text-xs">
             <div class="opacity-70 text-xs leading-4 mb-8">
-              Use your own domain name to access the files instead of <code
+              使用您自己的域名访问文件，而不是 <code
               class="text-black dark:text-white">&lt;bucket&gt;.&lt;user&gt;.workers.dev</code>.
             </div>
           </div>
@@ -84,7 +84,7 @@ let { endPointPulled } = storeToRefs(statusStore)
 
 let endPoint = ref('')
 let apiKey = ref('')
-let btnText = ref('Save To LocalStorage')
+let btnText = ref('储存到本地')
 let btnDisabled = ref(false)
 let endPointList = ref([])
 let panelOpen = ref('1')
@@ -95,11 +95,11 @@ let newApiKey = ref('')
 let newCustomDomain = ref('')
 
 let editingEndpoint = ref('')
-let endpointActionText = ref('Add a new endpoint')
+let endpointActionText = ref('添加一个新后端')
 let editThisEndpoint = function (endpoint) {
   if (editingEndpoint.value === endpoint) {
     editingEndpoint.value = ''
-    animateText(endpointActionText, 'Add a new endpoint')
+    animateText(endpointActionText, '添加一个新后端')
     newEndpoint.value = ''
     newApiKey.value = ''
     newCustomDomain.value = ''
@@ -239,7 +239,7 @@ const saveApiInfo = function () {
   newCustomDomain.value = ''
 
   setTimeout(() => {
-    animateText(btnText, 'Save To LocalStorage', {
+    animateText(btnText, '储存到本地', {
       interval: 20,
       skipText: 'Save '
     })

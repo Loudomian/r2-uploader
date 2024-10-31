@@ -20,7 +20,7 @@
         @click="toggleSelectMode"
         :disabled="fileList.length === 0"
       >
-        {{ selectMode && fileList.length ? 'Quit Selection Mode' : 'Selection Mode' }}
+        {{ selectMode && fileList.length ? '退出多选模式' : '多选模式' }}
       </button>
 
       <div v-show="selectMode" class="w-full flex space-x-2 mt-2">

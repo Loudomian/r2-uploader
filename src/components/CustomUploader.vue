@@ -994,9 +994,9 @@ watch(
   fileList,
   (newVal) => {
     if (newVal.length) {
-      chooseFileBtnText.value = 'Add More Files'
+      chooseFileBtnText.value = '添加更多文件'
     } else {
-      chooseFileBtnText.value = 'Choose Files'
+      chooseFileBtnText.value = '选择文件'
     }
 
     calcAllFileSize()

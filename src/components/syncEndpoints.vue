@@ -1,17 +1,16 @@
 <template>
   <div>
     <div class="pb-2 text-xs opacity-80">
-      Sync Endpoints
+      云同步后端
     </div>
     <div aria-busy="true" v-show="findingUser">
 
     </div>
     <div class="text-sm" v-show="!isLogin && !findingUser">
-      To sync your endpoints across devices, you can login with your GitHub account. All the information will be
-      AES encrypted locally and then stored in our database.
+      要在设备之间同步您的后端，您可以使用您的 GitHub 账户登录。所有信息将会在本地进行 AES 加密，然后存储在我们的数据库中。
     </div>
     <div class="mt-6" v-show="!isLogin && !findingUser">
-      <button class="text-sm inline-block w-auto mb-0" @click="goToLogin">Login With <img
+      <button class="text-sm inline-block w-auto mb-0" @click="goToLogin">使用 <img
         class="h-[1.3rem] relative top-[-.1rem]"
         :src="isDark ? 'https://r2-cf-api.jw1.dev/GitHub_Logo.png' : 'https://r2-cf-api.jw1.dev/GitHub_Logo_White.png'"
         alt="GitHub"></button>
