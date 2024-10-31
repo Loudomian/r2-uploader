@@ -88,7 +88,7 @@
             style="border: none"
             @click="clearUploadedFiles"
           >
-            Dismiss
+            忽略
           </button>
         </div>
         <div class="pb-4" v-show="fileList.length > 0 && !uploading">

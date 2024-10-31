@@ -63,19 +63,19 @@
       </div>
 
       <div class="text-xs mb-2" v-show="fileList.length > 0">
-        Sort by
+        排序依据
         <select class="text-xs inline-block w-[10rem] mb-0" v-model="sort">
-          <option value="0">Default</option>
-          <option value="1">Date(newest first)</option>
-          <option value="2">Date(oldest first)</option>
-          <option value="3">Size(largest first)</option>
-          <option value="4">Size(smallest first)</option>
+          <option value="0">默认</option>
+          <option value="1">日期（最新的在前）</option>
+          <option value="2">日期（最旧的在前）</option>
+          <option value="3">大小（从大到小）</option>
+          <option value="4">大小（从小到大）</option>
         </select>
       </div>
 
       <div class="pb-4" v-show="fileList.length > 0">
         <label for="seeFolderStructure" class="text-xs" :aria-busy="reconstructing">
-          <input type="checkbox" id="seeFolderStructure" v-model="seeFolderStructure" class="mr-2" :disabled="reconstructing"> Folder Structure
+          <input type="checkbox" id="seeFolderStructure" v-model="seeFolderStructure" class="mr-2" :disabled="reconstructing"> 文件夹结构
         </label>
       </div>
 
@@ -103,7 +103,7 @@
                 type="checkbox"
                 :id="folder.name"
                 @change="handleFolderSelect(folder.name)"
-              /> Select All</label>
+              /> 全选</label>
             </div>
             <div
               class="item mb-2 rounded text-sm py-1 flex items-center justify-between"
@@ -344,7 +344,7 @@ function deleteSelectedFiles() {
   })
 }
 
-const copyButtonText = ref('Copy URLs')
+const copyButtonText = ref('复制链接')
 const copyButtonDisabled = ref(false)
 
 function copySelectedFileUrls() {
@@ -358,15 +358,15 @@ function copySelectedFileUrls() {
   const urlString = fileUrls.join('\n')
   navigator.clipboard.writeText(urlString)
     .then(() => {
-      copyButtonText.value = 'Copied!'
+      copyButtonText.value = '已复制！'
       copyButtonDisabled.value = true
       setTimeout(() => {
-        copyButtonText.value = 'Copy URLs'
+        copyButtonText.value = '复制链接'
         copyButtonDisabled.value = false
       }, 2000)
     })
     .catch(err => {
-      console.error('Failed to copy URLs: ', err)
+      console.error('无法复制以下链接: ', err)
     })
 }
 

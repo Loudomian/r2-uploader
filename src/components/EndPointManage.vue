@@ -2,19 +2,19 @@
   <div>
     <details :open="panelOpen === '1'" id="panel">
       <summary class='font-bold italic'>
-        Endpoints
+        后端
       </summary>
       <article>
         <form action="javascript:" class="mb-0">
           <div class="pb-2 text-xs opacity-80">
-            <span v-show="endPointList.length === 1">You have 1 endpoint, and it is selected.</span>
+            <span v-show="endPointList.length === 1">您有 1 个后端，并且已选择它。</span>
             <span v-show="endPointList.length > 1">
-            Choose between different endpoints, {{ 'you have ' + endPointList.length + ' endpoints' }}
+              选择不同的后端, {{ '你有 ' + endPointList.length + ' 个后端' }}
           </span>
           </div>
           <div v-show="endPointList.length === 0" class="text-sm">
-            You need Cloudflare Workers to upload files to Cloudflare R2. Have a look at the
-            <a href="/setup-guide/" class="underline">setup guide</a>.
+            您需要 Cloudflare Workers 才能将文件上传到 Cloudflare R2。请查看一下。
+            <a href="/setup-guide/" class="underline">设置指南</a>。
           </div>
           <div v-for="item in endPointList" class="flex mt-2">
             <input type="radio" name="current_endpoint" :id="item.endPoint" :data-id="item.endPoint" :checked="item.endPoint === endPoint"
