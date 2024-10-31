@@ -117,7 +117,7 @@ let editThisEndpoint = function (endpoint) {
 
   editingEndpoint.value = endpoint
 
-  animateText(endpointActionText, 'Edit this endpoint')
+  animateText(endpointActionText, '修改这个后端')
 }
 
 
