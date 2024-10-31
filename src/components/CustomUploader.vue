@@ -192,7 +192,7 @@
           </div>
         </div>
 
-        <div class="pt-4 pb-2 text-xs" v-show="fileList.length">Files Queued:</div>
+        <div class="pt-4 pb-2 text-xs" v-show="fileList.length">文件队列:</div>
         <div
           class="item rounded text-sm flex w-full mb-2 relative items-center"
           v-for="(item, index) in fileList"
@@ -287,7 +287,7 @@ let statusStore = useStatusStore()
 
 let browserSupportsDirectoryUpload = ref(true)
 let fileList = ref([])
-let chooseFileBtnText = ref('Choose Files')
+let chooseFileBtnText = ref('选择文件')
 let allFileSize = ref(0)
 let progressMap = ref({})
 let statusMap = ref({})
