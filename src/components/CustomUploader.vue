@@ -1,7 +1,7 @@
 <template>
   <div>
     <form action="javascript:">
-      <div class="font-bold italic">Upload Files</div>
+      <div class="font-bold italic">上传文件</div>
       <div>
         <label
           for="fileInput"
@@ -19,7 +19,7 @@
             opacity: uploading ? 0.5 : 1
           }"
           @click="handleFolder"
-          >Choose Folder 📂</label
+          >选择文件夹 📂</label
         >
 
         <input
@@ -37,7 +37,7 @@
           @click="upload"
           :disabled="uploading"
         >
-          🔥 Upload
+          🔥 上传
         </button>
       </div>
       <div>
@@ -101,7 +101,7 @@
               v-model="skipFilesWithTheSameName"
             />
             <label for="skip_uploading_if_filename_is_the_same" class="text-xs"
-              >Skip uploading files with the same name</label
+              >跳过上传同名文件</label
             >
           </div>
           <div class="flex mb-2">
@@ -112,7 +112,7 @@
               v-model="renameFileWithRandomId"
               id="renameFileWithRandomId"
             />
-            <label class="text-xs" for="renameFileWithRandomId">Rename each file with a random ID</label>
+            <label class="text-xs" for="renameFileWithRandomId">将每个文件重命名为随机 ID</label>
           </div>
           <div class="flex">
             <input
@@ -122,12 +122,12 @@
               v-model="compressImagesBeforeUploading"
               id="compressImagesBeforeUploading"
             />
-            <label class="text-xs" for="compressImagesBeforeUploading"> Compress images before uploading </label>
+            <label class="text-xs" for="compressImagesBeforeUploading"> 在上传之前压缩图像 </label>
           </div>
           <div v-if="compressImagesBeforeUploading" class="text-xs pt-4 pl-2">
             <div>
               <label for="removeEXIF" class="flex items-center"
-                ><input id="removeEXIF" type="checkbox" v-model="defaultCompressOptions.removeEXIF" /> Remove
+                ><input id="removeEXIF" type="checkbox" v-model="defaultCompressOptions.removeEXIF" /> 移除
                 EXIF</label
               >
             </div>
@@ -139,7 +139,7 @@
                   class="shrink-0"
                   v-model="defaultCompressOptions.convertImageType"
                 />
-                <span class="shrink-0">Covert to</span>
+                <span class="shrink-0">转换为</span>
                 <select
                   :disabled="!defaultCompressOptions.convertImageType"
                   class="shrink-0 mb-0 ml-2 text-sm py-1 px-2"
@@ -153,7 +153,7 @@
             </div>
             <div class="flex">
               <label for="maxWidth" class="flex items-center">
-                <span class="shrink-0">Max Width:</span>
+                <span class="shrink-0">最大宽度:</span>
                 <input
                   type="number"
                   class="text-xs py-1 px-2 ml-1 mb-0"
@@ -166,7 +166,7 @@
             </div>
             <div class="flex">
               <label for="maxHeight" class="flex items-center">
-                <span class="shrink-0">Max Height:</span>
+                <span class="shrink-0">最大长度:</span>
                 <input
                   type="number"
                   class="text-xs py-1 px-2 ml-1 mb-0"
@@ -179,7 +179,7 @@
             </div>
             <div class="flex">
               <label for="quality" class="flex items-center">
-                <span class="shrink-0">Image Quality:</span>
+                <span class="shrink-0">图片质量:</span>
                 <input
                   type="number"
                   class="text-xs py-1 px-2 ml-1 mb-0"

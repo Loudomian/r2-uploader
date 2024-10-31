@@ -1,7 +1,7 @@
 <template>
   <form action="javascript:">
     <div class="font-bold italic">
-      <div> File List</div>
+      <div> 文件列表</div>
     </div>
 
     <div class="mt-4 mb-4 flex items-center flex-wrap space-x-2">
@@ -12,7 +12,7 @@
         @click="loadData"
         :aria-busy="loading"
         :disabled="loading || !endPoint"
-      >Refresh
+      >刷新
       </button>
       <button
         class="text-xs inline-block w-auto outline mb-0"
@@ -29,7 +29,7 @@
           class="text-xs inline-block w-auto outline mb-0 border-red-500 text-red-500"
           style="padding: 0.3rem 0.5rem"
           @click="deleteSelectedFiles"
-        >Delete Selected
+        >删除所选
         </button>
         <button
           :disabled="selectedFiles.length === 0"
@@ -47,7 +47,7 @@
         class="text-xs"
         v-show="!loading && fileList.length === 0 && !loadDataErrorText"
       >
-        Seems like we got nothing here.
+        看起来这里什么都没有。
       </div>
       <div class="text-red-500 text-xs" v-show="loadDataErrorText">
         {{ loadDataErrorText }}
