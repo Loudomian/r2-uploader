@@ -149,7 +149,7 @@
                   @click="deleteThisFile(item.key)"
                   :aria-busy="deletingKey === item.key"
                   :disabled="deletingKey === item.key"
-                >Delete
+                >删除
                 </button>
               </div>
             </div>
@@ -316,7 +316,7 @@ function restoreSortSelection() {
 let selectedFiles = ref([])
 
 function deleteSelectedFiles() {
-  let c = confirm('Are you sure to delete these files?')
+  let c = confirm('您确定要删除这些文件吗？')
 
   if (!c) {
     return false
@@ -331,7 +331,7 @@ function deleteSelectedFiles() {
 
         if (selectedFiles.value.length === 0) {
           setTimeout(() => {
-            console.log('All selected files have been deleted.')
+            console.log('所有选定的文件已被删除。')
             clearSelection()
           }, 50)
         }
@@ -471,7 +471,7 @@ let deleteThisFile = function (key, isBatchDelete = false, options = {}) {
   let c = true
 
   if (!isBatchDelete) {
-    c = confirm('Are you sure to delete this file?')
+    c = confirm('您确定要删除这个文件吗？')
   }
 
   if (!c) {
@@ -503,7 +503,7 @@ let deleteThisFile = function (key, isBatchDelete = false, options = {}) {
     })
     .catch(() => {
       deletingKey.value = ''
-      alert('Failed to delete file.')
+      alert('无法删除文件。')
     })
 }
 
