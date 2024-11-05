@@ -43,7 +43,7 @@
           </div>
           <div>
             <label for="api_key" class="text-sm">Workers 后端密钥</label>
-            <input type="password" placeholder="密钥会像浏览记录已经储存在本地" v-model="newApiKey" required
+            <input type="password" placeholder="密钥会像浏览记录一样储存在本地" v-model="newApiKey" required
                    id="api_key" class="text-xs">
           </div>
           <div>
